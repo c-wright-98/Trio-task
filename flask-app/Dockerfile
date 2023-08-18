@@ -2,13 +2,13 @@
 FROM python:3.6
 
 # Copy contents into image
-COPY . /app
+COPY . .
  
 # install pip dependencies from requirements file
 RUN pip3 install -r requirements.txt
  
 # Expose correct port
-EXPOSE 80
+EXPOSE 5000
 
 # Create an entrypoint
 ENTRYPOINT ["python","app.py"]
